@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
 import { Heart, Target, Wrench, Users } from "lucide-react";
 
@@ -48,7 +49,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">The Miss Meticulous Standard</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              The agency was born out of frustration with the web design industry's love affair with bloat: overbuilt WordPress sites, proprietary page builders, and hosting contracts that trap business owners.
+              The agency was born out of frustration with the web design industry&apos;s love affair with bloat: overbuilt WordPress sites, proprietary page builders, and hosting contracts that trap business owners.
             </p>
             <p className="text-slate-600 leading-relaxed mb-4">
               Brittany Harp — founder, developer, and operator — set out to build a better model. One where a local plumber in Indianapolis can get a blazing-fast, professionally engineered website for $300 and own every byte of it.
@@ -104,12 +105,12 @@ export default function AboutPage() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-extrabold text-white mb-4">Ready to own your digital presence?</h2>
           <p className="text-slate-400 mb-8">Let&apos;s build something that performs and lasts.</p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-3.5 rounded-xl transition-colors"
           >
             Start a Conversation
-          </a>
+          </Link>
         </div>
       </section>
 
