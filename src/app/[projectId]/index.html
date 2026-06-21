@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Climate & Home Services | Premium Comfort & Repair Solutions</title>
+  
+  <!-- Tailwind CSS CDN for modern grid layouts and utility design details -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons for highly recognizable and premium interface symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Inter Font Family for optimized legibility -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    // Custom tailwind configuration to integrate your provided color tokens
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a5f',
+            'primary-dark': '#152a45',
+            secondary: '#f4a261',
+            accent: '#2a9d8f',
+            dark: '#0f172a',
+            light: '#f8fafc',
+            gray: '#64748b',
+            'gray-light': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-dark: #152a45;
+      --secondary: #f4a261;
+      --accent: #2a9d8f;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --gray-light: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: var(--light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HEADER */
+    .header {
+      background: var(--dark);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .logo-icon {
+      font-size: 1.5rem;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header-nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: white;
+    }
+
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--secondary);
+      color: var(--dark) !important;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      max-width: 550px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--dark);
+    }
+
+    .btn-primary:hover {
+      background: #e9a25a;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .btn-large {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.25rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 5rem 0;
+      background: white;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: var(--gray);
+      font-size: 1.125rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      animation: fadeInUp 0.6s ease-out backwards;
+      border: 1px solid var(--gray-light);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .service-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 30%, rgba(30,58,95,0.9));
+    }
+
+    .service-image h3 {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .service-content {
+      padding: 1.5rem;
+    }
+
+    .service-content p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .service-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: gap 0.2s;
+      cursor: pointer;
+    }
+
+    .service-link:hover {
+      gap: 0.5rem;
+      color: var(--secondary);
+    }
+
+    /* TRUST SECTION */
+    .trust {
+      padding: 5rem 0;
+      background: var(--primary);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .trust .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .trust h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .trust p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.5rem;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .trust-badges span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.08);
+      border-radius: 0.75rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--secondary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.5rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      padding: 5rem 0;
+      background: var(--gray-light);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      animation: fadeInUp 0.6s ease-out backwards;
+      transition: transform 0.2s;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      color: var(--primary);
+    }
+
+    .testimonial-author span {
+      font-size: 0.875rem;
+      color: var(--gray);
+    }
+
+    /* SERVICE AREA */
+    .service-area {
+      padding: 4rem 0;
+      text-align: center;
+      background: white;
+    }
+
+    .service-area h2 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 2rem 0;
+    }
+
+    .area-tag {
+      background: var(--gray-light);
+      color: var(--primary);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    
+    .area-tag:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .area-note {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      padding: 5rem 0;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(30,58,95,0.92);
+    }
+
+    .cta .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-small {
+      font-size: 0.875rem !important;
+      color: rgba(255,255,255,0.6) !important;
+      margin-top: 1.5rem !important;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.85);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-contact a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact span {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.875rem;
+    }
+
+    .footer h4 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: var(--secondary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* FLOATING CTA & CHAT ASSISTANT */
+    .floating-cta {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--secondary);
+      color: var(--dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      z-index: 99;
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+      cursor: pointer;
+    }
+
+    .floating-cta:hover {
+      transform: scale(1.1);
+      background: #e9a25a;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0.7); }
+      50% { box-shadow: 0 0 0 20px rgba(244, 162, 97, 0); }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE OVERRIDES */
+    @media (max-width: 768px) {
+      .header .container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .header-nav {
+        gap: 1rem;
+        font-size: 0.875rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .hero {
+        min-height: 75vh;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+      }
+      
+      .trust .container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .floating-cta {
+        width: 55px;
+        height: 55px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+
+    /* CUSTOM DYNAMIC UI STYLING FOR NOVEL INTERACTIVE BLOCKS */
+    .calculator-card {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+    }
+    
+    .rating-star-btn {
+      transition: transform 0.1s ease;
+    }
+    .rating-star-btn:hover {
+      transform: scale(1.2);
+    }
+    
+    .ticker-container {
+      background: #111e30;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-container py-2 border-b border-slate-800">
+    <div class="container flex justify-between items-center flex-wrap gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+        <span class="text-white font-medium text-xs sm:text-sm">LIVE EMERGENCY SERVICE ACTIVE:</span>
+        <span class="text-slate-300 text-xs sm:text-sm">4 technicians stationed in Marion & surrounding counties. Avg response: 22 mins.</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-xs">
+        <span><i class="fa-solid fa-circle-check text-accent mr-1"></i> EPA Certified</span>
+        <span><i class="fa-solid fa-shield text-accent mr-1"></i> Fully Insured & Licensed</span>
+        <span><i class="fa-solid fa-star text-amber-400 mr-1"></i> 4.9 out of 5 Avg Rating</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="#" class="header-brand hover:opacity-90 transition-opacity">
+        <span class="logo-icon text-secondary"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <span class="tracking-tight text-white">APEX<span class="text-secondary font-light">CLIMATE</span></span>
+      </a>
+      <nav class="header-nav">
+        <a href="#services">Our Services</a>
+        <a href="#calculator">Price Estimator</a>
+        <a href="#booking">Book Online</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#coverage">Service Area</a>
+        <a href="tel:15555555555" class="header-phone" id="header-phone-link">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span id="header-phone-text">(555) 555-5555</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.95) 40%, rgba(30,58,95,0.7) 100%), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80');">
+    <div class="hero-pattern"></div>
+    <div class="container relative z-10 py-12 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="hero-content lg:col-span-7">
+          <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 rounded-full px-3 py-1 mb-4 text-xs sm:text-sm">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+            </span>
+            <span class="text-slate-300 font-medium">Summer Tune-Up Special: 15% Off Heating & Cooling Systems</span>
+          </div>
+          <h1 class="text-white">Expert Climate & Home Engineering</h1>
+          <p class="hero-tagline">HVAC, Plumbing & Electrical Maintenance</p>
+          <p class="hero-sub">We match cutting-edge energy intelligence with world-class technicians. From fast emergency repairs to modern climate installations, get it done right today.</p>
+          
+          <div class="hero-cta">
+            <a href="#booking" class="btn btn-primary btn-large">
+              <i class="fa-regular fa-calendar-check mr-2"></i> Book Scheduled Repair
+            </a>
+            <a href="#calculator" class="btn btn-secondary btn-large">
+              <i class="fa-solid fa-calculator mr-2"></i> Estimate Project Cost
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span>24/7 Priority Emergency Support</span>
+            <span>$0 Down Financing Plans</span>
+            <span>Satisfaction Guarantee Warranted</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-slate-900/95 border border-slate-800 rounded-2xl p-6 shadow-2xl relative z-20">
+          <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-map-location-dot text-secondary"></i>
+            Is Apex In Your Backyard?
+          </h3>
+          <p class="text-slate-400 text-sm mb-4">Check instant booking availability and active dispatch options in your zip code.</p>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Enter your ZIP Code</label>
+              <div class="flex gap-2">
+                <input id="zipCodeInput" type="text" placeholder="e.g. 46201" maxlength="5" class="bg-slate-800 text-white border border-slate-700 rounded-lg px-4 py-2 w-full focus:outline-none focus:border-secondary text-base">
+                <button onclick="checkZipAvailability()" class="bg-secondary hover:bg-orange-400 text-dark font-bold px-5 py-2 rounded-lg transition duration-200">
+                  Verify
+                </button>
+              </div>
+            </div>
+
+            <!-- Area Checker Outcome Box -->
+            <div id="zipResultBox" class="hidden rounded-lg p-3 text-sm">
+              <p id="zipResultText" class="font-medium"></p>
+            </div>
+
+            <!-- Fast Estimate Panel Inside Hero -->
+            <div class="border-t border-slate-800 pt-4">
+              <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                <span>ACTIVE DEPLOYED TEAMS</span>
+                <span class="text-accent font-semibold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block animate-pulse"></span> SYSTEM OK
+                </span>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                <div class="bg-slate-800/50 p-2 rounded-lg">
+                  <span class="block text-white font-bold">14</span>
+                  <span class="text-[10px] text-slate-500">HVAC Techs</span>
+                </div>
+                <div class="bg-slate-800/50 p-2 rounded-lg">
+                  <span class="block text-white font-bold">9</span>
+                  <span class="text-[10px] text-slate-500">Plumbers</span>
+                </div>
+                <div class="bg-slate-800/50 p-2 rounded-lg">
+                  <span class="block text-white font-bold">7</span>
+                  <span class="text-[10px] text-slate-500">Electricians</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Expert Solutions, Single-Point Accountability</h2>
+        <p>Premium maintenance, repair, and engineering options for homeowners who value precision.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: HVAC -->
+        <div class="service-card">
+          <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80');">
+            <h3>Heating & Air Conditioning</h3>
+          </div>
+          <div class="service-content">
+            <p>Smart thermostat configurations, central AC installations, efficient furnace tune-ups, and heat pump repairs designed to optimize monthly energy bills.</p>
+            <a onclick="selectCalculatorTab('hvac')" href="#calculator" class="service-link">
+              Run Cost Calculator <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Plumbing -->
+        <div class="service-card">
+          <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80');">
+            <h3>Professional Plumbing Systems</h3>
+          </div>
+          <div class="service-content">
+            <p>Sewer leak repairs, rapid water heater replacements (tankless & storage), drain cleanouts, and sump pump diagnostics carried out by master plumbers.</p>
+            <a onclick="selectCalculatorTab('plumbing')" href="#calculator" class="service-link">
+              Run Cost Calculator <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Electrical -->
+        <div class="service-card">
+          <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=600&q=80');">
+            <h3>Safe & Modern Electrical Solutions</h3>
+          </div>
+          <div class="service-content">
+            <p>Main breaker box panel replacements, EV home charging station setups, smart light arrays, and thorough hazard safety audits to protect your family.</p>
+            <a onclick="selectCalculatorTab('electrical')" href="#calculator" class="service-link">
+              Run Cost Calculator <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator" class="py-16 bg-slate-900 text-white relative">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-secondary font-bold text-xs uppercase tracking-widest block mb-2">APEX DIGITAL PRICING TOOL</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Instant Diagnostic & Installation Estimator</h2>
+          <p class="text-slate-400 mt-2">Adjust values dynamically to build custom quotes based on our regional cost indexes.</p>
+        </div>
+
+        <!-- Interactive Calculator Card -->
+        <div class="bg-slate-800/90 border border-slate-700/80 rounded-2xl shadow-2xl p-6 md:p-8 calculator-card">
+          
+          <!-- Category Tabs -->
+          <div class="grid grid-cols-3 gap-2 mb-8 bg-slate-900 p-1.5 rounded-xl border border-slate-800">
+            <button onclick="changeCalcTab('hvac')" id="btn-tab-hvac" class="py-3 px-4 rounded-lg font-semibold text-sm transition duration-200 bg-secondary text-dark">
+              <i class="fa-solid fa-wind mr-2"></i><span class="hidden sm:inline">Heating & AC</span><span class="inline sm:hidden">HVAC</span>
+            </button>
+            <button onclick="changeCalcTab('plumbing')" id="btn-tab-plumbing" class="py-3 px-4 rounded-lg font-semibold text-sm transition duration-200 text-slate-400 hover:text-white">
+              <i class="fa-solid fa-droplet mr-2"></i><span class="hidden sm:inline">Plumbing</span><span class="inline sm:hidden">Plumb</span>
+            </button>
+            <button onclick="changeCalcTab('electrical')" id="btn-tab-electrical" class="py-3 px-4 rounded-lg font-semibold text-sm transition duration-200 text-slate-400 hover:text-white">
+              <i class="fa-solid fa-bolt mr-2"></i><span class="hidden sm:inline">Electrical</span><span class="inline sm:hidden">Elec</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Left inputs panel -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <!-- HVAC Tab Content -->
+              <div id="calc-hvac-inputs" class="space-y-6 calc-tab-panel">
+                <div>
+                  <label class="block text-sm font-semibold mb-2 text-slate-300">Choose Climate Project Scope</label>
+                  <select id="hvac-type" onchange="calculateQuote()" class="bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 w-full text-white focus:outline-none focus:border-secondary">
+                    <option value="tuneup">Standard Safety Inspection & Tune-up</option>
+                    <option value="repair">Emergency Component Troubleshooting & Repair</option>
+                    <option value="replace-ac">Premium AC Condenser Installation</option>
+                    <option value="replace-furnace">High-Efficiency Gas Furnace System Installation</option>
+                    <option value="replace-both" selected>Full HVAC System Replacement (Heat Pump + Air Handler)</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label class="text-sm font-semibold text-slate-300">Property Living Space (Sq. Ft.)</label>
+                    <span id="hvac-sqft-val" class="text-secondary font-bold">2,000 Sq. Ft.</span>
+                  </div>
+                  <input type="range" id="hvac-sqft" min="800" max="5000" step="100" value="2000" oninput="updateRangeVal('hvac-sqft', 'hvac-sqft-val', 'Sq. Ft.'); calculateQuote();" class="w-full accent-secondary">
+                  <div class="flex justify-between text-xs text-slate-500 mt-1">
+                    <span>800 sq ft</span>
+                    <span>5,000 sq ft</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-semibold text-slate-300">Optional Quality System Enhancements</label>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded bg-slate-900/50 hover:bg-slate-900 transition">
+                      <input type="checkbox" id="hvac-opt-nest" onchange="calculateQuote()" class="accent-secondary w-4 h-4 rounded">
+                      <span class="text-sm text-slate-300">Smart Nest Learning Thermostat (+ $350)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded bg-slate-900/50 hover:bg-slate-900 transition">
+                      <input type="checkbox" id="hvac-opt-air" onchange="calculateQuote()" class="accent-secondary w-4 h-4 rounded">
+                      <span class="text-sm text-slate-300">UV Air Purifier & Premium HEPA Filtration (+ $850)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PLUMBING Tab Content (Hidden initially) -->
+              <div id="calc-plumbing-inputs" class="space-y-6 calc-tab-panel hidden">
+                <div>
+                  <label class="block text-sm font-semibold mb-2 text-slate-300">Select Plumbing Service Task</label>
+                  <select id="plumb-type" onchange="calculateQuote()" class="bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 w-full text-white focus:outline-none focus:border-secondary">
+                    <option value="drain">Main Drain Line Clearing & Inspection</option>
+                    <option value="leak">Leak Location Diagnostics & Pipe Mending</option>
+                    <option value="waterheater">Tank-less Gas Water Heater Upgrade</option>
+                    <option value="sumppump">Commercial-Grade Submersible Sump Pump Install</option>
+                    <option value="fixtures">Full Kitchen & Bathroom Fixtures Upgrade</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label class="text-sm font-semibold text-slate-300">Number of Affected Fixtures / Bathrooms</label>
+                    <span id="plumb-count-val" class="text-secondary font-bold">2 Bathrooms</span>
+                  </div>
+                  <input type="range" id="plumb-count" min="1" max="6" step="1" value="2" oninput="updateRangeVal('plumb-count', 'plumb-count-val', 'Bathrooms'); calculateQuote();" class="w-full accent-secondary">
+                  <div class="flex justify-between text-xs text-slate-500 mt-1">
+                    <span>1 Fixture</span>
+                    <span>6+ Fixtures</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-semibold text-slate-300">Safety & Longevity Features</label>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded bg-slate-900/50 hover:bg-slate-900 transition">
+                      <input type="checkbox" id="plumb-opt-valve" onchange="calculateQuote()" class="accent-secondary w-4 h-4 rounded">
+                      <span class="text-sm text-slate-300">Smart Main Water Shut-off Valve with Leak Alarms (+ $550)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ELECTRICAL Tab Content (Hidden initially) -->
+              <div id="calc-electrical-inputs" class="space-y-6 calc-tab-panel hidden">
+                <div>
+                  <label class="block text-sm font-semibold mb-2 text-slate-300">Select Electrical Project</label>
+                  <select id="elec-type" onchange="calculateQuote()" class="bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 w-full text-white focus:outline-none focus:border-secondary">
+                    <option value="outlet">Smart GFCI Outlet Relocations & Updates</option>
+                    <option value="panel">Breaker Panel Upgrade & Service Mast (200 Amp)</option>
+                    <option value="charger" selected>Level 2 Universal EV Charging Box Installation</option>
+                    <option value="rewire">Whole-Home Circuit Troubleshooting & Rewiring</option>
+                    <option value="fixtures">Recessed Can & Designer Smart Lighting Package</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label class="text-sm font-semibold text-slate-300">Approximate Age of Home (Years)</label>
+                    <span id="elec-age-val" class="text-secondary font-bold">15 Years Old</span>
+                  </div>
+                  <input type="range" id="elec-age" min="1" max="80" step="5" value="15" oninput="updateRangeVal('elec-age', 'elec-age-val', 'Years Old'); calculateQuote();" class="w-full accent-secondary">
+                  <div class="flex justify-between text-xs text-slate-500 mt-1">
+                    <span>New Construction</span>
+                    <span>80+ Years (Historic Dialects)</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-semibold text-slate-300">Safety Upgrades</label>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded bg-slate-900/50 hover:bg-slate-900 transition">
+                      <input type="checkbox" id="elec-opt-surge" onchange="calculateQuote()" class="accent-secondary w-4 h-4 rounded">
+                      <span class="text-sm text-slate-300">Whole-Home Surge Protection System (+ $450)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Output Invoice Panel -->
+            <div class="lg:col-span-5 bg-slate-900 rounded-xl p-6 border border-slate-700/60 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-4 pb-2 border-b border-slate-800">
+                  Estimated Investment Quote
+                </h4>
+
+                <div class="space-y-4">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-slate-400">Primary Services:</span>
+                    <span id="calc-breakdown-primary" class="font-medium text-white">$4,200.00</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-slate-400">Scale / Scope Multipliers:</span>
+                    <span id="calc-breakdown-size" class="font-medium text-white">x1.20</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-slate-400">Premium Additions:</span>
+                    <span id="calc-breakdown-addons" class="font-medium text-white">$0.00</span>
+                  </div>
+                  <div class="flex justify-between text-sm text-emerald-400 font-medium">
+                    <span>Loyalty Instant Credit:</span>
+                    <span id="calc-breakdown-discount">-$150.00</span>
+                  </div>
+
+                  <div class="border-t border-slate-800 my-4 pt-4">
+                    <div class="flex justify-between items-baseline">
+                      <span class="text-slate-400 text-sm">Total Projected:</span>
+                      <div class="text-right">
+                        <span id="calc-total" class="text-3xl font-extrabold text-secondary">$4,890.00</span>
+                        <p class="text-[10px] text-slate-500 mt-1">Subject to on-site evaluation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Financing Suggestion -->
+                <div class="bg-slate-800/60 border border-slate-700/50 rounded-lg p-3.5 mt-6 text-xs text-slate-300 space-y-2">
+                  <div class="flex items-center gap-2 text-secondary font-bold">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>As Low As $45/month*</span>
+                  </div>
+                  <p>Get up to 60-month terms with 0% APR on qualifying high-efficiency system installations.</p>
+                </div>
+              </div>
+
+              <div class="mt-8 space-y-2">
+                <button onclick="applyEstimateToBooking()" class="w-full bg-secondary hover:bg-orange-400 text-dark font-bold py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-200 shadow-lg">
+                  <i class="fa-solid fa-file-invoice-dollar"></i> Apply Quote to Appointment
+                </button>
+                <p class="text-[10px] text-center text-slate-500">Your selected values will auto-populate the booking system below.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STATS SECTION -->
+  <section class="trust">
+    <div class="trust-pattern"></div>
+    <div class="container">
+      <div>
+        <h2 class="text-3xl font-extrabold mb-4">Unwavering Commitment to Operational Standard</h2>
+        <p class="text-lg text-slate-200">For over 15 years, we have set the gold standard in residential maintenance. All staff are subjected to rigorous background checks and continuous diagnostic education.</p>
+        
+        <div class="trust-badges mt-6 space-y-4">
+          <span class="text-slate-100 font-medium">
+            <i class="fa-solid fa-certificate text-secondary text-lg"></i> EPA Certified, NATE & Plumbing Board Licensed Group
+          </span>
+          <span class="text-slate-100 font-medium">
+            <i class="fa-solid fa-handshake-angle text-secondary text-lg"></i> $2 Million Comprehensive General Liability Insured
+          </span>
+          <span class="text-slate-100 font-medium">
+            <i class="fa-solid fa-rotate text-secondary text-lg"></i> 100% No-Hassle Customer Happiness Guarantee On-Demand
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number">14K+</div>
+            <div class="stat-label">Properties Restored</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">22min</div>
+            <div class="stat-label">Avg Emergency Response</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">45+</div>
+            <div class="stat-label">Expert Field Techs</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">4.9★</div>
+            <div class="stat-label">Google Verified Average</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC BOOKING & SCHEDULER SECTION -->
+  <section id="booking" class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-2">LIVE APPOINTMENT ENGINE</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-primary">Secure Your Service Slot</h2>
+          <p class="text-slate-600 mt-2">Book fully guaranteed appointments in under 2 minutes. No credit card required to secure.</p>
+        </div>
+
+        <div class="bg-light border border-gray-light rounded-2xl shadow-xl p-6 md:p-10 relative overflow-hidden">
+          
+          <!-- Progress Steps UI -->
+          <div class="flex items-center justify-between mb-8 max-w-md mx-auto relative">
+            <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-slate-200 -translate-y-1/2 z-0"></div>
+            <div id="booking-progress-line" class="absolute top-1/2 left-0 w-0 h-0.5 bg-secondary -translate-y-1/2 z-0 transition-all duration-300"></div>
+            
+            <div class="relative z-10 flex flex-col items-center">
+              <div id="step-dot-1" class="w-8 h-8 rounded-full bg-secondary text-dark flex items-center justify-center font-bold text-sm transition-all duration-300 shadow">1</div>
+              <span class="text-[10px] sm:text-xs text-slate-600 font-semibold mt-1">Scope</span>
+            </div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div id="step-dot-2" class="w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center font-bold text-sm transition-all duration-300">2</div>
+              <span class="text-[10px] sm:text-xs text-slate-600 font-semibold mt-1">Schedule</span>
+            </div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div id="step-dot-3" class="w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center font-bold text-sm transition-all duration-300">3</div>
+              <span class="text-[10px] sm:text-xs text-slate-600 font-semibold mt-1">Contact</span>
+            </div>
+          </div>
+
+          <!-- Main Booking Form Content -->
+          <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+            
+            <!-- STEP 1 PANEL -->
+            <div id="booking-step-1" class="space-y-6">
+              <h4 class="text-lg font-bold text-primary border-b border-gray-light pb-2 mb-4">Choose Service Focus</h4>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <label class="border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all" id="btn-select-hvac">
+                  <input type="radio" name="booking-category" value="HVAC Systems" checked class="hidden" onchange="updateBookingFocus('hvac')">
+                  <i class="fa-solid fa-wind text-2xl text-primary mb-2"></i>
+                  <span class="font-bold text-sm text-primary block">Climate & HVAC</span>
+                  <span class="text-[10px] text-slate-500 mt-1">Heating & Air</span>
+                </label>
+                <label class="border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all" id="btn-select-plumbing">
+                  <input type="radio" name="booking-category" value="Plumbing Repair" class="hidden" onchange="updateBookingFocus('plumbing')">
+                  <i class="fa-solid fa-droplet text-2xl text-primary mb-2"></i>
+                  <span class="font-bold text-sm text-primary block">Plumbing Systems</span>
+                  <span class="text-[10px] text-slate-500 mt-1">Pipes & Water Heaters</span>
+                </label>
+                <label class="border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all" id="btn-select-electrical">
+                  <input type="radio" name="booking-category" value="Electrical Service" class="hidden" onchange="updateBookingFocus('electrical')">
+                  <i class="fa-solid fa-bolt text-2xl text-primary mb-2"></i>
+                  <span class="font-bold text-sm text-primary block">Electrical Works</span>
+                  <span class="text-[10px] text-slate-500 mt-1">Panels, EV & Safety</span>
+                </label>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Describe Your Issue / Required Task</label>
+                <textarea id="booking-details" rows="3" placeholder="Please describe leaks, error codes, system brand, age or any custom requirements..." class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base"></textarea>
+              </div>
+
+              <div class="flex justify-end pt-4">
+                <button type="button" onclick="goToBookingStep(2)" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition duration-200">
+                  Select Appointment Time <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2 PANEL (Hidden Initially) -->
+            <div id="booking-step-2" class="space-y-6 hidden">
+              <h4 class="text-lg font-bold text-primary border-b border-gray-light pb-2 mb-4">Date & Time Selection</h4>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Date Picker -->
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-2">Target Date</label>
+                  <input type="date" id="booking-date" required class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base" onchange="generateTimeSlots()">
+                  <p class="text-xs text-slate-500 mt-1">Same-day dispatches are available for emergency issues.</p>
+                </div>
+
+                <!-- Live Time Slots Generation Grid -->
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-2">Available Dispatch Window</label>
+                  <div id="time-slots-grid" class="grid grid-cols-2 gap-2">
+                    <!-- Javascript will load actual active buttons here -->
+                  </div>
+                  <input type="hidden" id="selected-time-slot" required>
+                </div>
+              </div>
+
+              <div class="flex justify-between pt-4 border-t border-gray-light">
+                <button type="button" onclick="goToBookingStep(1)" class="bg-slate-200 hover:bg-slate-300 text-dark font-semibold py-3 px-6 rounded-lg transition duration-200">
+                  <i class="fa-solid fa-chevron-left text-xs mr-2"></i> Adjust Scope
+                </button>
+                <button type="button" id="btn-to-step3" onclick="goToBookingStep(3)" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition duration-200" disabled>
+                  Next: Contact Details <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3 PANEL (Hidden Initially) -->
+            <div id="booking-step-3" class="space-y-6 hidden">
+              <h4 class="text-lg font-bold text-primary border-b border-gray-light pb-2 mb-4">Contact & Location Specifics</h4>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-1">Full Name</label>
+                  <input type="text" id="cust-name" required placeholder="e.g. Eleanor Vance" class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base">
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-1">Mobile Telephone</label>
+                  <input type="tel" id="cust-phone" required placeholder="e.g. (555) 019-2834" class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="sm:col-span-2">
+                  <label class="block text-sm font-semibold text-slate-700 mb-1">Service Address</label>
+                  <input type="text" id="cust-address" required placeholder="e.g. 1024 Meridian Street" class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base">
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-1">Target Zip Code</label>
+                  <input type="text" id="cust-zip" required placeholder="e.g. 46220" maxlength="5" class="w-full border border-gray-light rounded-lg p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50 text-base">
+                </div>
+              </div>
+
+              <div class="bg-amber-50 border border-amber-200 text-amber-900 rounded-lg p-4 text-xs flex gap-3">
+                <i class="fa-solid fa-triangle-exclamation text-amber-600 text-lg flex-shrink-0"></i>
+                <p><strong>Note:</strong> Dispatch fee is 100% waived upon proceeding with any recommended repairs. An expert technician will text you 30 minutes prior to arrival.</p>
+              </div>
+
+              <div class="flex justify-between pt-4 border-t border-gray-light">
+                <button type="button" onclick="goToBookingStep(2)" class="bg-slate-200 hover:bg-slate-300 text-dark font-semibold py-3 px-6 rounded-lg transition duration-200">
+                  <i class="fa-solid fa-chevron-left text-xs mr-2"></i> Back
+                </button>
+                <button type="submit" class="bg-secondary hover:bg-orange-400 text-dark font-extrabold py-4 px-10 rounded-lg flex items-center gap-2 transition duration-200 shadow-lg text-lg">
+                  <i class="fa-regular fa-calendar-check"></i> Complete Secure Booking
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- SUCCESS RECEIPT / TICKET VIEW (Hidden Initially) -->
+          <div id="booking-success" class="hidden text-center py-6 space-y-6">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900">Appointment Scheduled!</h3>
+              <p class="text-slate-500 mt-1">A confirmation SMS and service diagnostic ticket have been finalized.</p>
+            </div>
+
+            <!-- TICKET EMBED -->
+            <div class="max-w-md mx-auto bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg relative text-left">
+              <!-- Ticket Header Color -->
+              <div class="bg-primary text-white p-4 flex justify-between items-center">
+                <div>
+                  <span class="text-[10px] text-slate-300 tracking-wider font-semibold uppercase">Apex Active Ticket</span>
+                  <h5 id="ticket-id" class="font-bold text-sm text-secondary">#APX-9824-A</h5>
+                </div>
+                <div class="text-right">
+                  <span class="inline-block bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] uppercase font-bold px-2.5 py-0.5 rounded-full">
+                    DISPATCH OK
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4 text-sm text-slate-700">
+                <div class="grid grid-cols-2 gap-4 border-b border-dashed border-slate-200 pb-4">
+                  <div>
+                    <span class="block text-[10px] uppercase font-semibold text-slate-400">Client</span>
+                    <strong id="ticket-name" class="text-slate-800">Eleanor Vance</strong>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] uppercase font-semibold text-slate-400">Mobile</span>
+                    <strong id="ticket-phone" class="text-slate-800">(555) 019-2834</strong>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 border-b border-dashed border-slate-200 pb-4">
+                  <div>
+                    <span class="block text-[10px] uppercase font-semibold text-slate-400">Scheduled Date</span>
+                    <strong id="ticket-date" class="text-slate-800">Monday, Sept 14</strong>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] uppercase font-semibold text-slate-400">Time Window</span>
+                    <strong id="ticket-time" class="text-slate-800">8:00 AM - 12:00 PM</strong>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="block text-[10px] uppercase font-semibold text-slate-400">Service Area</span>
+                  <strong id="ticket-address" class="text-slate-800">1024 Meridian Street</strong>
+                </div>
+
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
+                  <span class="font-semibold text-slate-800 block mb-1">Diagnostic Request:</span>
+                  <p id="ticket-details" class="text-slate-600 font-normal italic">HVAC Compressor tuneup & custom pricing appraisal.</p>
+                </div>
+              </div>
+
+              <!-- Tear-off style circular cuts -->
+              <div class="absolute bottom-16 -left-3 w-6 h-6 rounded-full bg-light border-r border-slate-200 z-10"></div>
+              <div class="absolute bottom-16 -right-3 w-6 h-6 rounded-full bg-light border-l border-slate-200 z-10"></div>
+
+              <!-- Bottom CTA inside Ticket -->
+              <div class="bg-slate-100 px-6 py-4 border-t border-dashed border-slate-200 flex justify-between items-center">
+                <span class="text-slate-500 text-xs">Technician: <strong>Markus R. (EPA Gold)</strong></span>
+                <button onclick="window.print()" class="text-primary hover:text-secondary font-bold text-xs flex items-center gap-1.5 transition">
+                  <i class="fa-solid fa-print"></i> Print Receipt
+                </button>
+              </div>
+            </div>
+
+            <button onclick="resetBookingEngine()" class="mt-4 text-sm font-semibold text-primary hover:text-secondary transition">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Book Another Appointment
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Neighbors Say</h2>
+        <p>Verified, certified customer satisfaction benchmarks across local service dispatches.</p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div id="testimonials-dynamic-grid" class="testimonials-grid mb-12">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Apex changed our complete split AC heat pump in under 6 hours during a heatwave. Polite, clean, and the final bill matched the estimate exactly. Extraordinary service."</p>
+          <div class="testimonial-author">
+            <strong>Robert Chen</strong>
+            <span>Indianapolis, IN</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We had a major electrical emergency late on Saturday. The technician, Markus, was here in 20 minutes and explained everything cleanly. Unbelievable responsiveness."</p>
+          <div class="testimonial-author">
+            <strong>Sarah J. Jenkins</strong>
+            <span>Carmel, IN</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"They installed my Level 2 EV home charger and verified the panel load capacity perfectly. Fast permitting work, extremely safe, and reasonably priced."</p>
+          <div class="testimonial-author">
+            <strong>Gregory Vance</strong>
+            <span>Fishers, IN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Review Submission Accordion Card -->
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl border border-gray-light p-6 md:p-8 shadow-lg">
+        <h4 class="text-xl font-bold text-primary mb-2 flex items-center gap-2">
+          <i class="fa-regular fa-comment-dots text-secondary"></i>
+          Share Your Apex Experience
+        </h4>
+        <p class="text-slate-500 text-sm mb-6">Your honest telemetry helps our family-owned business iterate and keep quality standards soaring high.</p>
+
+        <form id="review-form" onsubmit="handleReviewSubmit(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Your Name</label>
+              <input type="text" id="rev-name" required placeholder="e.g. Liam Sterling" class="w-full border border-gray-light rounded-lg px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">City / Location</label>
+              <input type="text" id="rev-location" required placeholder="e.g. Noblesville, IN" class="w-full border border-gray-light rounded-lg px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Star Rating</label>
+            <div class="flex gap-2 my-1">
+              <button type="button" onclick="setStarRating(1)" class="rating-star-btn text-2xl text-slate-300 hover:text-amber-400" id="star-btn-1"><i class="fa-solid fa-star"></i></button>
+              <button type="button" onclick="setStarRating(2)" class="rating-star-btn text-2xl text-slate-300 hover:text-amber-400" id="star-btn-2"><i class="fa-solid fa-star"></i></button>
+              <button type="button" onclick="setStarRating(3)" class="rating-star-btn text-2xl text-slate-300 hover:text-amber-400" id="star-btn-3"><i class="fa-solid fa-star"></i></button>
+              <button type="button" onclick="setStarRating(4)" class="rating-star-btn text-2xl text-slate-300 hover:text-amber-400" id="star-btn-4"><i class="fa-solid fa-star"></i></button>
+              <button type="button" onclick="setStarRating(5)" class="rating-star-btn text-2xl text-amber-400" id="star-btn-5"><i class="fa-solid fa-star"></i></button>
+            </div>
+            <input type="hidden" id="rev-rating" value="5">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Your Review</label>
+            <textarea id="rev-text" required rows="3" placeholder="Tell your neighbors how our technicians assisted with your cooling, heating, electrical, or plumbing setups..." class="w-full border border-gray-light rounded-lg p-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-secondary/50"></textarea>
+          </div>
+
+          <div class="flex justify-end pt-2">
+            <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg transition duration-200 text-sm">
+              Publish Review Live
+            </button>
+          </div>
+        </form>
+
+        <div id="review-success-toast" class="hidden mt-4 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm rounded-lg text-center font-medium">
+          ✓ Thank you! Your review has been added live to our index.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA / COVERAGE SECTION -->
+  <section id="coverage" class="service-area">
+    <div class="container">
+      <h2>Active Communities We Comfort</h2>
+      <p>Based in Central Indiana with quick dispatch centers across counties.</p>
+      
+      <div class="area-tags">
+        <span class="area-tag cursor-pointer">Marion County</span>
+        <span class="area-tag cursor-pointer">Hamilton County</span>
+        <span class="area-tag cursor-pointer">Boone County</span>
+        <span class="area-tag cursor-pointer">Hendricks County</span>
+        <span class="area-tag cursor-pointer">Johnson County</span>
+        <span class="area-tag cursor-pointer">Hancock County</span>
+        <span class="area-tag cursor-pointer">Madison County</span>
+        <span class="area-tag cursor-pointer">Morgan County</span>
+      </div>
+      
+      <p class="area-note">Don't see your neighborhood listed? Reach out via phone. We regularly service immediate exterior boundaries for larger projects.</p>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta" style="background-image: linear-gradient(rgba(30,58,95,0.92), rgba(15,23,42,0.95)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container">
+      <h2>Restoring Comfort to Your Oasis</h2>
+      <p>Whether you need instant electrical troubleshooting, emergency plumbing leak stopping, or dynamic split AC pricing options, our team is certified, licensed, and ready.</p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="#booking" class="btn btn-primary btn-large">
+          <i class="fa-regular fa-calendar-check mr-2"></i> Schedule Dispatch Online
+        </a>
+        <a href="tel:15555555555" class="btn btn-secondary btn-large" id="cta-phone-link">
+          <i class="fa-solid fa-phone-volume mr-2"></i> <span id="cta-phone-text">(555) 555-5555</span>
+        </a>
+      </div>
+      <p class="cta-small">No diagnostic fee applied when proceeding with qualified maintenance repairs. Regular business dispatch standards apply.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="flex items-center gap-2">
+            <span class="text-secondary"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            APEX CLIMATE & HOME SERVICES
+          </h3>
+          <p>Delivering high-efficiency engineering, rapid heating, cooling, plumbing, and electrical dispatches across Marion, Hamilton, and surrounding areas.</p>
+          
+          <div class="footer-contact mt-4">
+            <span>24/7 CUSTOMER HOTLINE</span>
+            <a href="tel:15555555555" id="footer-phone-link"><span id="footer-phone-text">(555) 555-5555</span></a>
+            <span id="footer-address-text">123 Main Street, Indianapolis, IN</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Core Expertise</h4>
+          <ul>
+            <li><a href="#services">Air Conditioner Services</a></li>
+            <li><a href="#services">Furnace Replacements</a></li>
+            <li><a href="#services">Emergency Plumbing Fixes</a></li>
+            <li><a href="#services">Water Heater Maintenance</a></li>
+            <li><a href="#services">EV Home Charging Sockets</a></li>
+            <li><a href="#services">Electrical Panel Upgrades</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company Standards</h4>
+          <ul>
+            <li><a href="#testimonials">Customer Reviews</a></li>
+            <li><a href="#coverage">Coverage Map</a></li>
+            <li><a href="#calculator">Price Estimation Indexes</a></li>
+            <li><a href="#booking">Book Scheduled Dispatches</a></li>
+            <li><a href="#">Licensed Bonded Details</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Apex Climate & Home Engineering Group, LLC. All Rights Reserved. Marion/Hamilton Licenses: #HVAC-901844, #PLB-2384-2, #ELEC-8812903. Terms of Service & Privacy policies apply.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA BUTTON -->
+  <div onclick="toggleChatbot()" class="floating-cta" title="Live Customer Support Desk">
+    <i id="chat-icon-indicator" class="fa-solid fa-comments text-2xl"></i>
+  </div>
+
+  <!-- CONVERSATIONAL SUPPORT ASSISTANT DRAWER -->
+  <div id="chat-widget" class="hidden fixed bottom-28 right-6 w-80 sm:w-96 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col transition-all duration-300">
+    <!-- Chat Header -->
+    <div class="bg-primary text-white p-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+            <i class="fa-solid fa-robot text-secondary"></i>
+          </div>
+          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"></span>
+        </div>
+        <div>
+          <h5 class="font-bold text-sm">Apex Assistant Desk</h5>
+          <span class="text-[10px] text-slate-300">Fast AI & Dispatch Assistant</span>
+        </div>
+      </div>
+      <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Chat Logs Box -->
+    <div id="chat-logs" class="p-4 h-64 overflow-y-auto space-y-3 bg-slate-50 text-xs sm:text-sm">
+      <div class="flex gap-2 items-start">
+        <div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-[10px] flex-shrink-0">
+          A
+        </div>
+        <div class="bg-slate-200 text-slate-800 p-2.5 rounded-r-lg rounded-bl-lg max-w-[80%]">
+          Hello! Welcome to Apex Climate. I can instantly assist with estimate questions, emergency dispatches, or local bookings.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Quick Answers Grid -->
+    <div class="p-3 bg-white border-t border-slate-100 grid grid-cols-2 gap-1.5">
+      <button onclick="askChatbot('How fast can you arrive for emergency dispatches?')" class="border border-slate-200 hover:border-secondary hover:bg-slate-50 rounded-lg p-2 text-[10px] text-slate-600 font-semibold text-left transition duration-150">
+        ⚡ Emergency Speed
+      </button>
+      <button onclick="askChatbot('Do you offer financing plans for HVAC?')" class="border border-slate-200 hover:border-secondary hover:bg-slate-50 rounded-lg p-2 text-[10px] text-slate-600 font-semibold text-left transition duration-150">
+        💳 Financing Plans
+      </button>
+      <button onclick="askChatbot('What areas do you service?')" class="border border-slate-200 hover:border-secondary hover:bg-slate-50 rounded-lg p-2 text-[10px] text-slate-600 font-semibold text-left transition duration-150">
+        📍 Service Areas
+      </button>
+      <button onclick="askChatbot('Is there a warranty on your workmanship?')" class="border border-slate-200 hover:border-secondary hover:bg-slate-50 rounded-lg p-2 text-[10px] text-slate-600 font-semibold text-left transition duration-150">
+        🛡️ Work Warranty
+      </button>
+    </div>
+
+    <!-- Live Text Input Chat Bar -->
+    <div class="p-3 bg-light border-t border-slate-100 flex gap-2">
+      <input type="text" id="chat-input-field" placeholder="Ask a question..." onkeydown="handleChatInputKey(event)" class="w-full border border-gray-light rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-secondary">
+      <button onclick="sendChatMessage()" class="bg-primary hover:bg-primary-dark text-white px-3.5 rounded-lg text-xs font-semibold">
+        Send
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    //   YOUR ACTUAL CONTACT & ADDRESS CONFIGS
+    // ==========================================
+    // Put your WhatsApp/SMS enabled phone number here (numbers only, with country code - e.g., '13175551234' for US)
+    const MY_BUSINESS_PHONE = '15555555555'; 
+    const MY_BUSINESS_PHONE_FORMATTED = '(555) 555-5555'; 
+    const MY_BUSINESS_ADDRESS = '123 Main Street, Indianapolis, IN';
+
+    // Global State management variables
+    let currentCalcTab = 'hvac';
+    let currentBookingFocus = 'hvac';
+    let activeBookingStep = 1;
+    let selectedRating = 5;
+
+    // Simulated local ZIP Codes that we support with quick dispatch times
+    const SUPPORTED_ZIPS = [
+      '46201', '46202', '46203', '46204', '46205', '46208', '46220', '46240', '46260',
+      '46032', '46033', '46037', '46038', '46077', '46060', '46062', '46250', '90210'
+    ];
+
+    // Core Price Matrix
+    const PRICE_MATRIX = {
+      hvac: {
+        tuneup: { base: 149, scale: 0.02 },
+        repair: { base: 349, scale: 0.05 },
+        'replace-ac': { base: 3800, scale: 0.75 },
+        'replace-furnace': { base: 3400, scale: 0.65 },
+        'replace-both': { base: 6900, scale: 1.20 }
+      },
+      plumbing: {
+        drain: { base: 199, scale: 25 },
+        leak: { base: 299, scale: 45 },
+        waterheater: { base: 1850, scale: 150 },
+        sumppump: { base: 649, scale: 35 },
+        fixtures: { base: 399, scale: 75 }
+      },
+      electrical: {
+        outlet: { base: 189, scale: 15 },
+        panel: { base: 2450, scale: 80 },
+        charger: { base: 950, scale: 40 },
+        rewire: { base: 1200, scale: 120 },
+        fixtures: { base: 450, scale: 50 }
+      }
+    };
+
+    // Initialize scripts on page window loading completions
+    window.onload = function() {
+      // Dynamic insertion of phone numbers & addresses to keep code clean
+      document.getElementById('header-phone-link').href = 'tel:' + MY_BUSINESS_PHONE;
+      document.getElementById('header-phone-text').innerText = MY_BUSINESS_PHONE_FORMATTED;
+      document.getElementById('cta-phone-link').href = 'tel:' + MY_BUSINESS_PHONE;
+      document.getElementById('cta-phone-text').innerText = MY_BUSINESS_PHONE_FORMATTED;
+      document.getElementById('footer-phone-link').href = 'tel:' + MY_BUSINESS_PHONE;
+      document.getElementById('footer-phone-text').innerText = MY_BUSINESS_PHONE_FORMATTED;
+      document.getElementById('footer-address-text').innerText = MY_BUSINESS_ADDRESS;
+
+      // Set the default date picker on booking step 2 to tomorrow
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const tomorrowStr = tomorrow.toISOString().split('T')[0];
+      const bookingDateInput = document.getElementById('booking-date');
+      if (bookingDateInput) {
+        bookingDateInput.setAttribute('min', tomorrowStr);
+        bookingDateInput.value = tomorrowStr;
+      }
+      
+      // Calculate original baseline interactive quote
+      calculateQuote();
+      generateTimeSlots();
+    };
+
+    // Zip Code checker mechanism
+    function checkZipAvailability() {
+      const input = document.getElementById('zipCodeInput');
+      const box = document.getElementById('zipResultBox');
+      const text = document.getElementById('zipResultText');
+      const zip = input.value.trim();
+
+      if (zip.length < 5) {
+        box.className = 'rounded-lg p-3 text-sm bg-amber-100 text-amber-800';
+        text.innerText = '⚠ Please input a valid 5-digit US Zip Code.';
+        box.classList.remove('hidden');
+        return;
+      }
+
+      const isSupported = SUPPORTED_ZIPS.includes(zip);
+
+      if (isSupported) {
+        box.className = 'rounded-lg p-3 text-sm bg-emerald-100 text-emerald-800';
+        text.innerHTML = '<strong>✓ Apex Coverage Confirmed!</strong> Deployed crews are ready in your ZIP code. Book with guaranteed $0 diagnostic dispatch options today.';
+      } else {
+        box.className = 'rounded-lg p-3 text-sm bg-orange-100 text-orange-800';
+        text.innerHTML = '<strong>⚠ Outside Standard Route:</strong> Your code is slightly beyond our primary route lines. Call <a href="tel:18005550199" class="underline font-bold">(800) 555-0199</a> to verify standby emergency dispatches.';
+      }
+      box.classList.remove('hidden');
+    }
+
+    // Tab selectors inside calculation module
+    function changeCalcTab(category) {
+      currentCalcTab = category;
+      
+      // Update UI button indicators
+      ['hvac', 'plumbing', 'electrical'].forEach(cat => {
+        const btn = document.getElementById(`btn-tab-${cat}`);
+        const panel = document.getElementById(`calc-${cat}-inputs`);
+        
+        if (cat === category) {
+          btn.className = 'py-3 px-4 rounded-lg font-semibold text-sm transition duration-200 bg-secondary text-dark';
+          panel.classList.remove('hidden');
+        } else {
+          btn.className = 'py-3 px-4 rounded-lg font-semibold text-sm transition duration-200 text-slate-400 hover:text-white';
+          panel.classList.add('hidden');
+        }
+      });
+
+      calculateQuote();
+    }
+
+    // Quick anchor-link connection to preset estimation indexes
+    function selectCalculatorTab(cat) {
+      changeCalcTab(cat);
+    }
+
+    // Range visual sync helper
+    function updateRangeVal(elementId, outputId, suffix) {
+      const val = document.getElementById(elementId).value;
+      const formatted = Number(val).toLocaleString();
+      document.getElementById(outputId).innerText = `${formatted} ${suffix}`;
+    }
+
+    // Core Price Estimator logic
+    function calculateQuote() {
+      let baseCost = 0;
+      let multiplier = 1.0;
+      let extraFees = 0;
+      let loyaltyCredit = 150.0;
+
+      if (currentCalcTab === 'hvac') {
+        const type = document.getElementById('hvac-type').value;
+        const sqft = parseInt(document.getElementById('hvac-sqft').value);
+        const pricing = PRICE_MATRIX.hvac[type];
+        
+        baseCost = pricing.base;
+        // Scaled factor depending on building layout size index
+        multiplier = 1 + ((sqft - 1000) * pricing.scale / 1000);
+        if (multiplier < 0.8) multiplier = 0.8;
+
+        if (document.getElementById('hvac-opt-nest').checked) extraFees += 350;
+        if (document.getElementById('hvac-opt-air').checked) extraFees += 850;
+
+        document.getElementById('calc-breakdown-primary').innerText = '$' + baseCost.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        document.getElementById('calc-breakdown-size').innerText = 'x' + multiplier.toFixed(2);
+        document.getElementById('calc-breakdown-addons').innerText = '$' + extraFees.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      } 
+      else if (currentCalcTab === 'plumbing') {
+        const type = document.getElementById('plumb-type').value;
+        const count = parseInt(document.getElementById('plumb-count').value);
+        const pricing = PRICE_MATRIX.plumbing[type];
+
+        baseCost = pricing.base;
+        multiplier = 1.0;
+        extraFees = (count - 1) * pricing.scale;
+
+        if (document.getElementById('plumb-opt-valve').checked) extraFees += 550;
+
+        document.getElementById('calc-breakdown-primary').innerText = '$' + baseCost.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        document.getElementById('calc-breakdown-size').innerText = 'Scale Fixed';
+        document.getElementById('calc-breakdown-addons').innerText = '$' + extraFees.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      } 
+      else if (currentCalcTab === 'electrical') {
+        const type = document.getElementById('elec-type').value;
+        const age = parseInt(document.getElementById('elec-age').value);
+        const pricing = PRICE_MATRIX.electrical[type];
+
+        baseCost = pricing.base;
+        // Older homes demand custom diagnostic time modifiers
+        multiplier = 1 + (age * 0.005);
+        
+        if (document.getElementById('elec-opt-surge').checked) extraFees += 450;
+
+        document.getElementById('calc-breakdown-primary').innerText = '$' + baseCost.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        document.getElementById('calc-breakdown-size').innerText = 'x' + multiplier.toFixed(2);
+        document.getElementById('calc-breakdown-addons').innerText = '$' + extraFees.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      }
+
+      // Total Final Math
+      const rawTotal = (baseCost * multiplier) + extraFees - loyaltyCredit;
+      const finalTotal = Math.max(120, rawTotal); // Floor pricing standard
+
+      document.getElementById('calc-total').innerText = '$' + finalTotal.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+    }
+
+    // Transfer estimate over to active scheduler fields
+    function applyEstimateToBooking() {
+      // Focus appropriate radio option in step 1
+      let radioToSelect = 'hvac';
+      let detailsString = '';
+
+      if (currentCalcTab === 'hvac') {
+        radioToSelect = 'hvac';
+        const typeText = document.getElementById('hvac-type').options[document.getElementById('hvac-type').selectedIndex].text;
+        const sqft = document.getElementById('hvac-sqft').value;
+        detailsString = `Applied Quote: ${typeText} for a ${sqft} Sq. Ft. floorplan. Total Est: ${document.getElementById('calc-total').innerText}`;
+      } else if (currentCalcTab === 'plumbing') {
+        radioToSelect = 'plumbing';
+        const typeText = document.getElementById('plumb-type').options[document.getElementById('plumb-type').selectedIndex].text;
+        detailsString = `Applied Quote: ${typeText}. Total Est: ${document.getElementById('calc-total').innerText}`;
+      } else if (currentCalcTab === 'electrical') {
+        radioToSelect = 'electrical';
+        const typeText = document.getElementById('elec-type').options[document.getElementById('elec-type').selectedIndex].text;
+        detailsString = `Applied Quote: ${typeText}. Total Est: ${document.getElementById('calc-total').innerText}`;
+      }
+
+      // Populate input data directly
+      updateBookingFocus(radioToSelect);
+      document.getElementById('booking-details').value = detailsString;
+
+      // Highlight target visual radios manually
+      const radios = document.getElementsByName('booking-category');
+      for (let i = 0; i < radios.length; i++) {
+        if (radios[i].value.toLowerCase().includes(radioToSelect)) {
+          radios[i].checked = true;
+        }
+      }
+
+      // Smooth scroll customer onto the scheduling container
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Step-by-Step progress routing within Form
+    function goToBookingStep(step) {
+      // Basic validation rules
+      if (step === 2 && activeBookingStep === 1) {
+        // Step 1 check - guarantee scope exists
+        // Done
+      }
+
+      if (step === 3 && activeBookingStep === 2) {
+        const timeInput = document.getElementById('selected-time-slot').value;
+        if (!timeInput) {
+          return; // Block proceed
+        }
+      }
+
+      activeBookingStep = step;
+
+      // Update Wizard indicator styles
+      document.getElementById('booking-progress-line').style.width = ((step - 1) * 50) + '%';
+      for (let i = 1; i <= 3; i++) {
+        const dot = document.getElementById(`step-dot-${i}`);
+        if (i < step) {
+          dot.className = 'w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow';
+          dot.innerHTML = '✓';
+        } else if (i === step) {
+          dot.className = 'w-8 h-8 rounded-full bg-secondary text-dark flex items-center justify-center font-bold text-sm shadow';
+          dot.innerHTML = i;
+        } else {
+          dot.className = 'w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center font-bold text-sm';
+          dot.innerHTML = i;
+        }
+      }
+
+      // Switch screen Panels
+      document.getElementById('booking-step-1').classList.add('hidden');
+      document.getElementById('booking-step-2').classList.add('hidden');
+      document.getElementById('booking-step-3').classList.add('hidden');
+      document.getElementById(`booking-step-${step}`).classList.remove('hidden');
+    }
+
+    // Radio styles visual update helper
+    function updateBookingFocus(focus) {
+      currentBookingFocus = focus;
+      const cardHVAC = document.getElementById('btn-select-hvac');
+      const cardPLUMB = document.getElementById('btn-select-plumbing');
+      const cardELEC = document.getElementById('btn-select-electrical');
+
+      // Reset styles
+      cardHVAC.className = 'border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all';
+      cardPLUMB.className = 'border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all';
+      cardELEC.className = 'border-2 border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-secondary transition-all';
+
+      if (focus === 'hvac') {
+        cardHVAC.className = 'border-2 border-secondary bg-slate-50 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-all';
+      } else if (focus === 'plumbing') {
+        cardPLUMB.className = 'border-2 border-secondary bg-slate-50 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-all';
+      } else if (focus === 'electrical') {
+        cardELEC.className = 'border-2 border-secondary bg-slate-50 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-all';
+      }
+    }
+
+    // Dynamic scheduling slot allocator
+    function generateTimeSlots() {
+      const targetDateVal = document.getElementById('booking-date').value;
+      if (!targetDateVal) return;
+
+      const dateObj = new Date(targetDateVal);
+      const isWeekend = (dateObj.getDay() === 5 || dateObj.getDay() === 6); // Friday-Saturday offset
+
+      const listContainer = document.getElementById('time-slots-grid');
+      listContainer.innerHTML = '';
+
+      // Standard dispatch periods
+      const slots = [
+        { label: '8 AM - 12 PM', key: 'morning' },
+        { label: '12 PM - 4 PM', key: 'afternoon' },
+        { label: '4 PM - 8 PM', key: 'evening' },
+        { label: 'EMERGENCY ONLY', key: 'priority' }
+      ];
+
+      slots.forEach((s) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'border border-slate-200 rounded-lg p-3 text-xs sm:text-sm font-semibold transition hover:border-secondary text-slate-700 bg-white';
+        btn.innerText = s.label;
+
+        // Simulate random slot bookings for realism
+        const isTaken = !isWeekend && (s.key === 'morning' && Math.random() > 0.4);
+
+        if (isTaken) {
+          btn.className = 'border border-slate-100 bg-slate-100 text-slate-400 p-3 text-xs sm:text-sm rounded-lg cursor-not-allowed';
+          btn.innerText += ' (Booked)';
+          btn.disabled = true;
+        } else {
+          btn.onclick = function() {
+            // Select this slot
+            document.getElementById('selected-time-slot').value = s.label;
+            
+            // Clean other siblings
+            const buttons = listContainer.getElementsByTagName('button');
+            for (let b of buttons) {
+              if (b !== btn && !b.disabled) {
+                b.className = 'border border-slate-200 rounded-lg p-3 text-xs sm:text-sm font-semibold transition hover:border-secondary text-slate-700 bg-white';
+              }
+            }
+            btn.className = 'border-2 border-secondary bg-slate-900 text-white p-3 text-xs sm:text-sm rounded-lg font-bold transition';
+            
+            // Activate button to proceed
+            document.getElementById('btn-to-step3').disabled = false;
+          };
+        }
+        listContainer.appendChild(btn);
+      });
+    }
+
+    // Complete form reservation dispatch with live PHP integration
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+
+      // Form gather data
+      const category = document.querySelector('input[name="booking-category"]:checked').value;
+      const details = document.getElementById('booking-details').value || "No additional details provided.";
+      const dateVal = document.getElementById('booking-date').value;
+      const timeVal = document.getElementById('selected-time-slot').value;
+      const nameVal = document.getElementById('cust-name').value;
+      const phoneVal = document.getElementById('cust-phone').value;
+      const addressVal = document.getElementById('cust-address').value;
+      const zipVal = document.getElementById('cust-zip').value;
+
+      // Format a clean, highly readable booking receipt message for WhatsApp/SMS
+      const bookingMessage = `🚨 NEW APEX BOOKING LEAD 🚨\n\n` +
+                             `• Client: ${nameVal}\n` +
+                             `• Phone: ${phoneVal}\n` +
+                             `• Service Requested: ${category}\n` +
+                             `• Target Date: ${dateVal}\n` +
+                             `• Arrival Window: ${timeVal}\n` +
+                             `• Address: ${addressVal}, ZIP ${zipVal}\n\n` +
+                             `• Issue Details: "${details}"`;
+
+      // Build WhatsApp URL API (works perfectly on both Desktop & Mobile)
+      const waUrl = `https://wa.me/${MY_BUSINESS_PHONE}?text=${encodeURIComponent(bookingMessage)}`;
+
+      // Open the WhatsApp chat directly in a new tab
+      window.open(waUrl, '_blank');
+
+      // Construct receipt view fields (keeps the immediate UX fast and flawless)
+      const dateFormatted = new Date(dateVal).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+      const randomTicketNo = 'APX-' + Math.floor(1000 + Math.random() * 9000) + '-' + String.fromCharCode(65 + Math.floor(Math.random() * 26));
+
+      document.getElementById('ticket-id').innerText = '#' + randomTicketNo;
+      document.getElementById('ticket-name').innerText = nameVal;
+      document.getElementById('ticket-phone').innerText = phoneVal;
+      document.getElementById('ticket-date').innerText = dateFormatted;
+      document.getElementById('ticket-time').innerText = timeVal;
+      document.getElementById('ticket-address').innerText = `${addressVal}, ZIP ${zipVal}`;
+      document.getElementById('ticket-details').innerText = `[${category}] ${details}`;
+
+      // Transition layouts smoothly
+      document.getElementById('booking-form').classList.add('hidden');
+      document.getElementById('booking-success').classList.remove('hidden');
+
+      // Scroll to booking ticket viewport
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Restore booking module back to operational state
+    function resetBookingEngine() {
+      document.getElementById('booking-form').reset();
+      document.getElementById('selected-time-slot').value = '';
+      document.getElementById('btn-to-step3').disabled = true;
+      
+      goToBookingStep(1);
+      generateTimeSlots();
+
+      document.getElementById('booking-success').classList.add('hidden');
+      document.getElementById('booking-form').classList.remove('hidden');
+    }
+
+    // Star rating picker mechanism
+    function setStarRating(num) {
+      selectedRating = num;
+      document.getElementById('rev-rating').value = num;
+
+      // Update interface colors
+      for (let i = 1; i <= 5; i++) {
+        const star = document.getElementById(`star-btn-${i}`);
+        if (i <= num) {
+          star.className = 'rating-star-btn text-2xl text-amber-400';
+        } else {
+          star.className = 'rating-star-btn text-2xl text-slate-300 hover:text-amber-400';
+        }
+      }
+    }
+
+    // Dynamic customer testimonial upload
+    function handleReviewSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('rev-name').value.trim();
+      const location = document.getElementById('rev-location').value.trim();
+      const text = document.getElementById('rev-text').value.trim();
+      const starsStr = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
+
+      // Construct a premium feedback card element
+      const card = document.createElement('div');
+      card.className = 'testimonial-card bg-white p-8 rounded-xl shadow border border-slate-100 transition duration-300 hover:shadow-lg animate-[fadeInUp_0.5s_ease-out_forwards]';
+      card.innerHTML = `
+        <div class="stars">${starsStr}</div>
+        <p class="testimonial-text">"${text}"</p>
+        <div class="testimonial-author">
+          <strong>${name}</strong>
+          <span>${location}</span>
+        </div>
+      `;
+
+      // Prepend dynamically to reviews listing
+      const grid = document.getElementById('testimonials-dynamic-grid');
+      grid.insertBefore(card, grid.firstChild);
+
+      // Reset form variables
+      document.getElementById('review-form').reset();
+      setStarRating(5);
+
+      // Toast indicator success feedback
+      const toast = document.getElementById('review-success-toast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+
+    // Floating Bot Assist toggles
+    function toggleChatbot() {
+      const widget = document.getElementById('chat-widget');
+      const icon = document.getElementById('chat-icon-indicator');
+
+      if (widget.classList.contains('hidden')) {
+        widget.classList.remove('hidden');
+        widget.classList.add('flex');
+        icon.className = 'fa-solid fa-xmark text-2xl';
+      } else {
+        widget.classList.add('hidden');
+        widget.classList.remove('flex');
+        icon.className = 'fa-solid fa-comments text-2xl';
+      }
+    }
+
+    // Conversational query processor
+    function askChatbot(query) {
+      // Append user's speech bubble
+      appendChatMessage(query, 'user');
+
+      // Generate standard responses base
+      let response = "I will coordinate with the dispatch operator. For detailed support, please dial our emergency group at (800) 555-0199.";
+
+      const lower = query.toLowerCase();
+      if (lower.includes('speed') || lower.includes('fast') || lower.includes('emergency')) {
+        response = "⚡ Our dispatches operate 24/7. Marion & Hamilton County dispatches maintain an average arrival speed of 22 minutes today. All diagnostics are free when repairs are approved.";
+      } else if (lower.includes('finance') || lower.includes('financing') || lower.includes('pay') || lower.includes('card')) {
+        response = "💳 We offer $0-down, 0% APR financing up to 60 months for comprehensive HVAC installations. Quick approvals are authorized directly over the phone or during diagnostic evaluations.";
+      } else if (lower.includes('area') || lower.includes('service') || lower.includes('location')) {
+        response = "📍 We provide fast local coverage for Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Zionsville, and adjacent Central Indiana locations.";
+      } else if (lower.includes('warranty') || lower.includes('guarantee')) {
+        response = "🛡️ Absolutely! All repairs carry a minimum 1-Year Workmanship Warranty. System replacements carry up to a 10-Year Comprehensive Parts & Labor Warranty Protection Plan.";
+      }
+
+      // Simulate human typing hesitation delay
+      setTimeout(() => {
+        appendChatMessage(response, 'assistant');
+      }, 650);
+    }
+
+    function appendChatMessage(text, sender) {
+      const logs = document.getElementById('chat-logs');
+      const bubble = document.createElement('div');
+      bubble.className = 'flex gap-2 items-start';
+
+      if (sender === 'user') {
+        bubble.innerHTML = `
+          <div class="ml-auto bg-primary text-white p-2.5 rounded-l-lg rounded-br-lg max-w-[85%] text-xs sm:text-sm">
+            ${text}
+          </div>
+        `;
+      } else {
+        bubble.innerHTML = `
+          <div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-[10px] flex-shrink-0">
+            A
+          </div>
+          <div class="bg-slate-200 text-slate-800 p-2.5 rounded-r-lg rounded-bl-lg max-w-[80%] text-xs sm:text-sm">
+            ${text}
+          </div>
+        `;
+      }
+
+      logs.appendChild(bubble);
+      logs.scrollTop = logs.scrollHeight; // Keep log bottom-aligned
+    }
+
+    // Direct manual text input handle
+    function sendChatMessage() {
+      const field = document.getElementById('chat-input-field');
+      const text = field.value.trim();
+      if (!text) return;
+
+      field.value = '';
+      askChatbot(text);
+    }
+
+    function handleChatInputKey(event) {
+      if (event.key === 'Enter') {
+        sendChatMessage();
+      }
+    }
+  </script>
+</body>
+</html>
